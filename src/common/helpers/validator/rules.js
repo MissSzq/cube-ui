@@ -7,7 +7,7 @@ const rules = {
       return true
     }
     type = type || (Array.isArray(val) ? 'array' : typeof val)
-    if (type === 'array') {
+    if (type === 'array' && Array.isArray(val) === 'array') {
       return val.length > 0
     }
     return val !== '' && val !== undefined
